@@ -32,7 +32,7 @@
 
     var tableSchema = {
         id: "earthquakeFeed",
-        alias: "Earthquakes in the last 30 days",
+        alias: "Earthquakes in the last week",
         columns: cols
     };
 
@@ -40,7 +40,7 @@
     };
 
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson", function(resp) {
+        $.getJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson", function(resp) {
             var feat = resp.features,
                 tableData = [];
 
