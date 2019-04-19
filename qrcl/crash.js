@@ -16,7 +16,7 @@
     };
 
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson", function(resp) {
+        $.getJSON("https://data.qld.gov.au/api/action/datastore_search?resource_id=e88943c0-5968-4972-a15f-38e120d72ec0&limit=5", function(resp) {
             var feat = resp.features,
                 tableData = [];
 
