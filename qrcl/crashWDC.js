@@ -29,8 +29,8 @@
             for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
                     "id": feat[i].id,
-                    "Crash_Ref_Number": feat[i].properties.Crash_Ref_Number,
-                    "Crash_Severity": feat[i].properties.Crash_Severity
+                    "Crash ID": feat[i].properties.Crash_Ref_Number,
+                    "Severity": feat[i].properties.Crash_Severity
                 });
             }
 
