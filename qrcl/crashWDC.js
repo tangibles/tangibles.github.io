@@ -13,34 +13,13 @@
        id: "time",
        alias: "mseconds",
        dataType: tableau.dataTypeEnum.int
-     }, {
-        id: "mag",
-        alias: "magnitude",
-        dataType: tableau.dataTypeEnum.float
-    }, {
-        id: "title",
-        alias: "title",
-        dataType: tableau.dataTypeEnum.string
-    }, {
-      id: "tsunami",
-      alias: "tsunami",
-      dataType: tableau.dataTypeEnum.int
-  }, {
-        id: "location",
-        dataType: tableau.dataTypeEnum.geometry
-    }];
-
-    var tableSchema = {
-        id: "earthquakeFeed",
-        alias: "Earthquakes in the last 30 days",
-        columns: cols
-    };
+     };
 
     schemaCallback([tableSchema]);
     };
 
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson", function(resp) {
+        $.getJSON("https://data.qld.gov.au/api/action/datastore_search?resource_id=e88943c0-5968-4972-a15f-38e120d72ec0&limit=5", function(resp) {
             var feat = resp.features,
                 tableData = [];
 
