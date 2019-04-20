@@ -8,11 +8,11 @@
     }, {
       id: "Crash_Ref_Number",
       alias: "Crash ID",
-      dataType: tableau.dataTypeEnum.string
+      dataType: tableau.dataTypeEnum.int
      }, {
        id: "Crash_Severity",
        alias: "Severity",
-       dataType: tableau.dataTypeEnum.int
+       dataType: tableau.dataTypeEnum.string
      }];
 
     schemaCallback([tableSchema]);
@@ -42,7 +42,7 @@
     tableau.registerConnector(myConnector);
     $(document).ready(function () {
       $("#submitButton").click(function () {
-        tableau.connectionName = "USGS Earthquake Feed";
+        tableau.connectionName = "Qld Road Crash Location Feed";
         tableau.submit();
     });
 });
