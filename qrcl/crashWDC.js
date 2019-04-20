@@ -6,11 +6,11 @@
         id: "id",
         dataType: tableau.dataTypeEnum.string
     }, {
-      id: "place",
+      id: "Crash_Ref_Number",
       alias: "place",
       dataType: tableau.dataTypeEnum.string
      }, {
-       id: "time",
+       id: "Crash_Severity",
        alias: "mseconds",
        dataType: tableau.dataTypeEnum.int
      };
